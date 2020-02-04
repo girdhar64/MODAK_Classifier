@@ -40,9 +40,9 @@ Now lets fit the model using model.fit_generator for 10epochs with real time ima
 
 ## Step.4 Validation and Accuracy 
 Now lets cheak accuracy,Validation accuracy ,Loss and validation loss using model history we have saved previously 
-![title](images/acc&loss.png.png)
+![title](images/acc&loss.png)
 Plots for the same 
-![title](images/train&val_loss.png.png)
+![title](images/train&val_loss.png)
 
 ## Vedrict
 ### Achieved a accurracy of 86.21 percent on Training and 73.78 percent on validation After 10 epoch But loss is Also high Possibly Due to Dataset being small in size.
