@@ -24,4 +24,11 @@ We need to make two directories train_directory and Validation_directory , both 
 The Dataset of around 2000 images is in provided in the repository 
 ![title](images/dir.png)
 
-
+## Step.2 Data Augemtation
+As we know CNN models are always Data Hungry 1746 train images and 330 test images are not enough to train our model properly, so we need to implement Data Augmentation to increase size of Dataset via ImageDataGenerator Library from Keras.
+![title](images/dataset_download.png)
+ I did a rescaling,rotation by a range of 40 in both clockwise and anticlockwise Direction,width_shift_range and height_shift_range of 0.2,shear_range of 0.2,zoom_range of 0.2 and horizontal flipping being True,I didnt take Vertical flipping into account as it may not look like a modak after it .
+ 
+## Step.3 Choosing and Fitting our Model
+I used Transfer learning to Import a Inception_v3 Network Pretrained Network for this task, This would save me large computing power,Transfer Learning and Mostly used for Computer extensive task like CNN.
+![title](images/inception.png)
