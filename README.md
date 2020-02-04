@@ -1,9 +1,6 @@
-# MODAK_Classifier
-Determines if an image is modak or not.
-STEP.1 Collected Dataset by scrapping Google images
-STEP.2 Data Augmentation to increase size of Dataset via ImageDataGenerator Library from Keras
-STEP.3 Trained the model on 1700 Images, Accurracy is 86.21 percent on Training and 73.78 percent on validation After 10 epochs 
+ 
 # MODAK_CLASSIFIER
+![title](images/modak.png)
 
 Determines if an image is modak or not used a CNN network with Transfer Learning,Accurracy is 86.21 percent on Training and 73.78 percent on validation After 10 epochs.
 
@@ -30,5 +27,12 @@ As we know CNN models are always Data Hungry 1746 train images and 330 test imag
  I did a rescaling,rotation by a range of 40 in both clockwise and anticlockwise Direction,width_shift_range and height_shift_range of 0.2,shear_range of 0.2,zoom_range of 0.2 and horizontal flipping being True,I didnt take Vertical flipping into account as it may not look like a modak after it .
  
 ## Step.3 Choosing and Fitting our Model
+In all the Below Step i have Used a google colab notebook,We need to upload our data to google Drive and Mount our Notebook to the Drive All steps are performed in Colab notebook in the Repository.
+
 I used Transfer learning to Import a Inception_v3 Network Pretrained Network for this task, This would save me large computing power,Transfer Learning and Mostly used for Computer extensive task like CNN.
 ![title](images/inception.png)
+
+Remove the Top layer from the Network,and redefine it for our own input Data And then compile the model With a Sigmoid Unit in the Output for Binary Classification Output 1 is Defined as a Modak and Output 0 is defined as NotModak.
+![title](images/dataset_download.png)
+
+
