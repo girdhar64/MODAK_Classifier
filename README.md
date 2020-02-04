@@ -1,6 +1,6 @@
  
 # MODAK_CLASSIFIER
-![title](images/modak.png)
+![title](images/modak.jpg)
 
 Determines if an image is modak or not used a CNN network with Transfer Learning,Accurracy is 86.21 percent on Training and 73.78 percent on validation After 10 epochs.
 
@@ -35,4 +35,15 @@ I used Transfer learning to Import a Inception_v3 Network Pretrained Network for
 Remove the Top layer from the Network,and redefine it for our own input Data And then compile the model With a Sigmoid Unit in the Output for Binary Classification Output 1 is Defined as a Modak and Output 0 is defined as NotModak.
 ![title](images/dataset_download.png)
 
+Now lets fit the model using model.fit_generator for 10epochs with real time image augmentation.
+![title](images/model_fit.png)
 
+## Step.4 Validation and Accuracy 
+Now lets cheak accuracy,Validation accuracy ,Loss and validation loss using model history we have saved previously 
+![title](images/acc&loss.png.png)
+Plots for the same 
+![title](images/inception.png)
+
+## Vedrict
+### Achieved a accurracy of 86.21 percent on Training and 73.78 percent on validation After 10 epoch But loss is Also high Possibly Due to Dataset being small in size.
+Feel free to contribute on how to Improve the Model.
