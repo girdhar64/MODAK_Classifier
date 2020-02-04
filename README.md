@@ -23,7 +23,7 @@ The Dataset of around 2000 images is in provided in the repository
 
 ## Step.2 Data Augemtation
 As we know CNN models are always Data Hungry 1746 train images and 330 test images are not enough to train our model properly, so we need to implement Data Augmentation to increase size of Dataset via ImageDataGenerator Library from Keras.
-![title](images/dataset_download.png)
+![title](images/imagegenerator.png)
  I did a rescaling,rotation by a range of 40 in both clockwise and anticlockwise Direction,width_shift_range and height_shift_range of 0.2,shear_range of 0.2,zoom_range of 0.2 and horizontal flipping being True,I didnt take Vertical flipping into account as it may not look like a modak after it .
  
 ## Step.3 Choosing and Fitting our Model
@@ -33,7 +33,7 @@ I used Transfer learning to Import a Inception_v3 Network Pretrained Network for
 ![title](images/inception.png)
 
 Remove the Top layer from the Network,and redefine it for our own input Data And then compile the model With a Sigmoid Unit in the Output for Binary Classification Output 1 is Defined as a Modak and Output 0 is defined as NotModak.
-![title](images/dataset_download.png)
+![title](images/compile.png)
 
 Now lets fit the model using model.fit_generator for 10epochs with real time image augmentation.
 ![title](images/model_fit.png)
@@ -42,7 +42,7 @@ Now lets fit the model using model.fit_generator for 10epochs with real time ima
 Now lets cheak accuracy,Validation accuracy ,Loss and validation loss using model history we have saved previously 
 ![title](images/acc&loss.png.png)
 Plots for the same 
-![title](images/inception.png)
+![title](images/train&val_loss.png.png)
 
 ## Vedrict
 ### Achieved a accurracy of 86.21 percent on Training and 73.78 percent on validation After 10 epoch But loss is Also high Possibly Due to Dataset being small in size.
